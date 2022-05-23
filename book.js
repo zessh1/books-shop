@@ -1,8 +1,12 @@
-const main = document.querySelector("main");
-const header = document.querySelector("header");
+const body = document.querySelector("body")
+const main = document.createElement("main")
+const header = document.createElement("header")
 const div = document.createElement("div");
 const book_box = document.createElement("div")
 const buy_book_box = document.createElement("div")
+
+body.appendChild(header)
+body.appendChild(main)
 
 
 header.appendChild(div);
@@ -146,7 +150,7 @@ function buy_book(x) {
     const confirm_btn = document.querySelector(".confirm")
 
     confirm_btn.classList.add("enable")
-    exit_btn.src = "/images/X.png";
+    exit_btn.src = "images/X.png";
     exit_btn.classList.add("exit-btn");
     show_more.innerText = "Show more";
     book_btns.classList.add("book-btn");
