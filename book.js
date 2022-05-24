@@ -4,7 +4,7 @@ const header = document.createElement("header")
 const div = document.createElement("div");
 const book_box = document.createElement("div")
 const buy_book_box = document.createElement("div")
-
+main.classList.add("main")
 body.appendChild(header)
 body.appendChild(main)
 
@@ -92,6 +92,7 @@ function getBook(maxNum = 1) {
                         desc_box.appendChild(title)
                         desc_box.appendChild(descr)
                         desc_box.appendChild(close_btn)
+                        show_more.disabled = true;
 
                     })
 
@@ -100,6 +101,7 @@ function getBook(maxNum = 1) {
                 close_btn.addEventListener("click", function() {
 
                     close_btn.closest(".desc-box").remove();
+                    show_more.disabled = false;
                 })
 
                 book_box.appendChild(book_parts);
@@ -121,14 +123,18 @@ function getBook(maxNum = 1) {
 const total_buy_price = document.createElement("div");
 const confirm = document.createElement("button");
 const total_confirm = document.createElement("div")
+const confirm_direct = document.createElement("a")
 
+confirm_direct.classList.add("confirm-direct")
+confirm_direct.href = "validation.html"
 total_confirm.classList.add("total-confirm")
 confirm.classList.add("confirm");
 confirm.innerText = "Confirm"
 total_buy_price.classList.add("total-price");
 buy_book_box.appendChild(total_confirm)
 total_confirm.appendChild(total_buy_price);
-total_confirm.appendChild(confirm)
+total_confirm.appendChild(confirm_direct)
+confirm_direct.appendChild(confirm)
 
 
 
@@ -148,7 +154,9 @@ function buy_book(x) {
     const total_price = document.querySelector(".total-price");
     const exit_btn = document.createElement("img");
     const confirm_btn = document.querySelector(".confirm")
+    const exit_box = document.createElement("div")
 
+    exit_box.classList.add("exit-box")
     confirm_btn.classList.add("enable")
     exit_btn.src = "images/X.png";
     exit_btn.classList.add("exit-btn");
@@ -186,7 +194,8 @@ function buy_book(x) {
     buy_book_box.appendChild(book_parts)
     book_parts.appendChild(img)
     book_parts.appendChild(book_info)
-    book_parts.appendChild(exit_btn)
+    book_parts.appendChild(exit_box)
+    exit_box.appendChild(exit_btn)
     book_info.appendChild(book_title_price)
     book_info.appendChild(book_btns)
     book_title_price.appendChild(author)
