@@ -40,6 +40,8 @@ const gift_branded_label = document.createElement("label")
 const radio_box = document.createElement("div")
 const gift_box = document.createElement("div")
 const complete = document.createElement("button")
+const gift_title = document.createElement("div")
+const radio_title = document.createElement("div")
 
 radio_box.classList.add("radio-box")
 gift_box.classList.add("gift-box")
@@ -128,6 +130,10 @@ gift_postcard_label.innerText = "add postcard"
 gift_discount_label.innerText = "provide 2% discount to the next time"
 gift_branded_label.innerText = "branded pen or pencil"
 complete.innerText = "Complete"
+radio_title.innerText = "Payment type:"
+radio_title.style.fontFamily = "Georgia";
+gift_title.innerText = "Choose 2 gift: "
+gift_title.style.fontFamily = "Georgia"
 
 radio_cash_btn.checked = true;
 
@@ -152,6 +158,7 @@ div.appendChild(flat_box)
 flat_box.appendChild(flat_label)
 flat_box.appendChild(flat_number)
 div.appendChild(radio_box)
+radio_box.appendChild(radio_title)
 radio_box.appendChild(radio_cash_box)
 radio_box.appendChild(radio_card_box)
 radio_cash_box.appendChild(radio_cash_btn)
@@ -159,6 +166,7 @@ radio_cash_box.appendChild(radio_cash_label)
 radio_card_box.appendChild(radio_card_btn)
 radio_card_box.appendChild(radio_card_label)
 div.appendChild(gift_box)
+gift_box.appendChild(gift_title)
 gift_box.appendChild(pack_gift_box)
 pack_gift_box.appendChild(gift_pack_check)
 pack_gift_box.appendChild(gift_pack_label)
