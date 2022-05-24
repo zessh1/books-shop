@@ -57,13 +57,13 @@ radio_card_btn.classList.add("radio-card-label")
 radio_cash_box.classList.add("radio-cash-box")
 radio_card_box.classList.add("radio-card-box")
 pack_gift_box.classList.add("check-gift-box")
-gift_pack_check.classList.add("gift-pack-check")
+gift_pack_check.classList.add("gift-check")
 postcard_gift_box.classList.add("postcard-gift-box")
-gift_postcard_check.classList.add("gift-postcard-check")
+gift_postcard_check.classList.add("gift-check")
 discount_gift_box.classList.add("discount-gift-box")
-gift_discount_check.classList.add("gift-discount-check")
+gift_discount_check.classList.add("gift-check")
 branded_gift_box.classList.add("branded-gift-box")
-gift_branded_check.classList.add("gift-branded-check")
+gift_branded_check.classList.add("gift-check")
 complete.classList.add("complete")
 name_box.classList.add("input-cont")
 surname_box.classList.add("input-cont")
@@ -212,4 +212,22 @@ function updateValue(e) {
     complete.disabled = !isValid();
 }
 
+function onlytwoCheckBox() {
+    var checkboxgroup = document.getElementsByClassName("gift-check")
+    var limit = 2;
+    for (var i = 0; i < checkboxgroup.length; i++) {
+        checkboxgroup[i].onclick = function() {
+            var checkedcount = 0;
+            for (var i = 0; i < checkboxgroup.length; i++) {
+                checkedcount += (checkboxgroup[i].checked) ? 1 : 0;
+            }
+            if (checkedcount > limit) {
+                console.log("You can select maximum of " + limit + " checkbox.");
+                alert("You can select maximum of " + limit + " checkbox.");
+                this.checked = false;
+            }
+        }
+    }
+}
+onlytwoCheckBox()
 
