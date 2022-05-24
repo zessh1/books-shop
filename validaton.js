@@ -190,7 +190,7 @@ complete.addEventListener("click", function (){
         input_data.push(element.value)
         console.log(input_data)
     }
-    alert(`The order created.\n The delivery address is ${input_data[3]} House ${input_data[4]}, flat ${input_data[5]}.\n Custoemer ${input_data[0]} ${input_data[1]}. `)
+    alert(`The order created.\n The delivery address is ${input_data[3]} House ${input_data[4]}, flat ${input_data[5]}.\n Customer ${input_data[0]} ${input_data[1]}. `)
 
 
 })

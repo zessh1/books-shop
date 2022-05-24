@@ -194,7 +194,8 @@ position: relative;
 }
 
 .valid-inputs:valid {
-    border:none;
+    border: 3px solid transparent;
+
 }
 .valid-inputs:required:invalid {
     border: 3px solid red;
