@@ -5,6 +5,16 @@
     display: grid;
     grid-template-columns: 50% 50%;
 }
+button {
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    font-weight: 500;
+    border-radius: 10rem;
+    padding: 0.625rem 1.5rem 0.5rem;
+}
+
 .header-title {
     font-family: Georgia;
     display: flex;
@@ -21,7 +31,7 @@ header {
     margin-top: 30px;
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     margin-right: 20px;
-    border-radius: 8px;
+    border-radius: 6px;
     position: relative;
 
 }
@@ -44,11 +54,8 @@ header {
 }
 .add_buy {
     margin-left: 25px;
-    background-color: whitesmoke;
-    border: 3px solid coral;
-    border-radius: 4px;
-    color: blue;
-
+    color: #fff;
+    background-color: #1266f1;
 }
 .add_buy:hover {
     box-shadow: 2px 3px 4px #afafaf;
@@ -78,7 +85,7 @@ header {
 }
 input{
     height: 25px;
-    border-radius: 8px;
+    border-radius: 6px;
     border:none;
 }
 .books-for-buy {
@@ -121,11 +128,8 @@ input{
     margin-bottom: 5px;
 }
 .show-more {
-
-    color: deepskyblue;
-    background-color: whitesmoke;
-    border: 3px solid antiquewhite;
-    border-radius: 4px;
+    color: #fff;
+    background-color: #39c0ed;
 }
 .show-more:hover {
     box-shadow: 2px 3px 4px #afafaf;
@@ -143,7 +147,7 @@ position: relative;
     height: 100%;
     background-color: deepskyblue;
     z-index: 5;
-    border-radius: 15px;
+    border-radius: 6px;
     left: 15px;
     box-shadow: 2px 4px 25px #afafaf;
 
@@ -154,10 +158,8 @@ position: relative;
 }
 .confirm {
     display: none;
-    max-width: fit-content;
-    width: 100%;
-
-    color: deepskyblue;
+    color: #4f4f4f;
+    background-color: #f9f9f9;
 }
 .descr {
     font-family: Georgia;
@@ -173,18 +175,18 @@ position: relative;
     margin-top: 40px;
 }
 .close-btn {
-    width: fit-content;
     margin-top: 15px;
     margin-left: 15px;
-    border-radius: 4px;
-    border: 2px solid green;
+    color: #fff;
+    background-color: #00b74a;
 
 
 }
 .validation-body {
     width: 100%;
     height: 100%;
-    background-color: deepskyblue;
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+
 }
 .validation-box {
     display: flex;
@@ -200,4 +202,3 @@ position: relative;
 .valid-inputs:required:invalid {
     border: 3px solid red;
 }
-
