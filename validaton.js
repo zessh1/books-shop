@@ -46,7 +46,7 @@ gift_box.classList.add("gift-box")
 body.classList.add("validation-body")
 div.classList.add("validation-box")
 name.classList.add("valid-inputs")
-surname.classList.add("validinputs")
+surname.classList.add("valid-inputs")
 delivery_date.classList.add("valid-inputs")
 street.classList.add("valid-inputs")
 house_number.classList.add("valid-inputs")
@@ -175,7 +175,14 @@ div.appendChild(complete)
 
 
 complete.addEventListener("click", function (){
-
+    const inputs = document.getElementsByClassName("valid-inputs");
+    input_data = []
+    for (let i = 0; i <inputs.length; i++ ) {
+        let element = inputs[i]
+        input_data.push(element.value)
+        console.log(input_data)
+    }
+    alert(`The order created.\n The delivery address is ${input_data[3]} House ${input_data[4]}, flat ${input_data[5]}.\n Custoemer ${input_data[0]} ${input_data[1]}. `)
 
 
 })
